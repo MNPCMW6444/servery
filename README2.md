@@ -1,0 +1,2 @@
+# servery
+free coinmarketcap proxy
