@@ -4,7 +4,6 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
 
-
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
@@ -14,10 +13,9 @@ app.listen(port, () => {
 });
 app.use(
   cors({
-    ori{
-  origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-})
+    origin: "http://localhost:3000",
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  })
 );
 
 app.get("/thedata", async (req, res) => {
