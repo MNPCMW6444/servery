@@ -13,7 +13,10 @@ app.listen(port, () => {
 });
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://competent-bhabha-69ad15.netlify.app",
+    ],
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
   })
 );
