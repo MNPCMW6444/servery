@@ -65,13 +65,3 @@ app.get("/thedata", async (req, res) => {
     res.status(500).send();
   }
 });
-
-app.post("/createnotf", (req, res) => {
-  const subs = req.body;
-
-  res.status(201).json({});
-
-  const payload = JSON.stringify({ title: "Push test" });
-
-  webpush.sendNotification(subs, payload).catch((err) => console.errror(er));
-});
