@@ -1,19 +1,10 @@
 const express = require("express");
-const webpush = require("web-push");
 const bodyparser = require("body-parser");
 const cors = require("cors");
-const path = require("path");
 
 const app = express();
-app.use(express.static(path.join(__dirname, "client")));
 
 const port = process.env.PORT || 5000;
-
-const pubKey =
-  "BDPknGIKMSNfFGKYU0UnoJJtgb33Zupuv2Lm-tb1n2ttd24mPMr7Ai_VUrSSbaBLbRTYcu2PTIhTj-Hu6qTMuzU";
-const prtKey = "Tphrzpar1nWjhY52s39ij0aRq_Jp1roGc-79s8wBx3A";
-
-webpush.setVapidDetails("mailto:pantsflow@gmail.com", pubKey, prtKey);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -47,7 +38,7 @@ app.get("/thedata", async (req, res) => {
         convert: "USD",
       },
       headers: {
-        "X-CMC_PRO_API_KEY": "bc7d6dba-1611-447d-811b-d045bc389281",
+        "X-CMC_PRO_API_KEY": "56c91bfd-e6e5-4d96-8dff-ae00466e01c0",
       },
       json: true,
       gzip: true,
